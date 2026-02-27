@@ -4,6 +4,9 @@
 :root {
   font-family: 'Martian Mono', monospace;
 }
+p {
+  padding-top: 20px;
+}
 
 @theme {
   --color-border: hsl(var(--border));
@@ -14,14 +17,17 @@
   --color-primary-foreground: hsl(var(--primary-foreground));
 
   --color-card: hsl(var(--card));
+  --color-shadow: hsla(var(--shadow));
 
   --animate-float: float 6s ease-in-out infinite;
   --animate-pulse-subtle: pulse-subtle 4s ease-in-out infinite;
   --animate-fade-in: fade-in 0.7s ease-out forwards;
+  --animate-fade-partial: fade-partial 0.7s ease-out forwards;
   --animate-fade-in-delay-1: fade-in 0.7s ease-out 0.2s forwards;
   --animate-fade-in-delay-2: fade-in 0.7s ease-out 0.4s forwards;
   --animate-fade-in-delay-3: fade-in 0.7s ease-out 0.6s forwards;
-  --animate-fade-in-delay-4: fade-in 0.7s ease-out 0.8s forwards;
+  --animate-fade-in-delay-4: fade-in 0.7s ease-out 1.0s forwards;
+  --animate-fade-partial-delay-4: fade-partial 0.7s ease-out 0.8s forwards;
   --animate-meteor: meteor 5s linear infinite;
 
   @keyframes float {
@@ -52,6 +58,16 @@
       transform: translateY(0);
     }
   }
+  @keyframes fade-partial {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 0.6;
+      transform: translateY(0);
+    }
+  }
   @keyframes meteor {
     0% {
       transform: rotate(215deg) translateX(0);
@@ -73,9 +89,10 @@
     --foreground: 222 47% 11%;
     
     --card: 0 0% 100%;
+    --shadow: 255 91.7% 76.3% 0.5;
     
-    --primary: 250 47% 60%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 250 47% 44%;
+    --primary-foreground: 250 47% 60%;
     
     --border: 214 32% 91%;
   }
@@ -85,6 +102,7 @@
     --foreground: 213 31% 91%;
     
     --card: 222 47% 8%;
+    --shadow: 39 81.5% 48.8% 0.5;
     
     --primary: 35 81.5% 48.8%;
     --primary-foreground: 36 100% 67.5%;
@@ -129,7 +147,7 @@
 
 @utility text-glow {
   @apply relative;
-  text-shadow: 0 0 10px rgba(167, 139, 250, 0.5);
+  text-shadow: 0 0 50px var(--shadow);
 }
 
 @utility card-hover {
@@ -145,7 +163,7 @@
 
 @utility cosmic-button {
   @apply px-6 py-2 rounded-full bg-primary text-primary-foreground font-medium
-        transition-all duration-300 hover:shadow-[0_0_10px_rgba(139,92,246,0.5)]
+        transition-all duration-300 hover:shadow-[0_0_10px_rgba(226,155,23,0.5)]
         hover:scale-105 active:scale-95;
 }
 
