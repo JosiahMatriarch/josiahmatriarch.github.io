@@ -1,4 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Martian+Mono:wght@100..800&display=swap');
 @import 'tailwindcss';
+
+:root {
+  font-family: 'Martian Mono', monospace;
+}
 
 @theme {
   --color-border: hsl(var(--border));
@@ -14,9 +19,9 @@
   --animate-pulse-subtle: pulse-subtle 4s ease-in-out infinite;
   --animate-fade-in: fade-in 0.7s ease-out forwards;
   --animate-fade-in-delay-1: fade-in 0.7s ease-out 0.2s forwards;
-  --animate-fade-in-delay-2: fade-in 0.7s ease-out 0.2s forwards;
-  --animate-fade-in-delay-3: fade-in 0.7s ease-out 0.2s forwards;
-  --animate-fade-in-delay-4: fade-in 0.7s ease-out 0.2s forwards;
+  --animate-fade-in-delay-2: fade-in 0.7s ease-out 0.4s forwards;
+  --animate-fade-in-delay-3: fade-in 0.7s ease-out 0.6s forwards;
+  --animate-fade-in-delay-4: fade-in 0.7s ease-out 0.8s forwards;
   --animate-meteor: meteor 5s linear infinite;
 
   @keyframes float {
@@ -76,13 +81,13 @@
   }
 
   .dark {
-    --background: 222 47% 4%;
+    --background: 0 0% 8%;
     --foreground: 213 31% 91%;
     
     --card: 222 47% 8%;
     
-    --primary: 250 65% 65%;
-    --primary-foreground: 213 31% 91%;
+    --primary: 35 81.5% 48.8%;
+    --primary-foreground: 36 100% 67.5%;
     
     --border: 217 33% 20%;
   }
