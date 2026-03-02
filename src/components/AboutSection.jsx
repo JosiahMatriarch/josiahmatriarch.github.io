@@ -59,8 +59,7 @@ export const AboutSection = () => {
                                     <div className="text-left">
                                         <h4 className="font-semibold text-lg"> Game Development</h4>
                                         <p>
-                                            Experienced in both Unity and Unreal game engines, I've been obsessed with art, stories, and programming for most 
-                                            of my life.
+                                            Enemy AI and systems design have been the core of my involvement in game design, building lively NPCS and optimizing backed systems to complement them.
                                         </p>
                                     </div>
                                 </div>
@@ -71,10 +70,9 @@ export const AboutSection = () => {
                                         <User className="h-6 w-6 text-background"/>
                                     </div>
                                     <div className="text-left">
-                                        <h4 className="font-semibold text-lg"> Game Development</h4>
+                                        <h4 className="font-semibold text-lg"> User Feedback</h4>
                                         <p>
-                                            Experienced in both Unity and Unreal game engines, I've been obsessed with art, stories, and programming for most 
-                                            of my life.
+                                            Taking feedback from users and incorporating said feedback into the iterative design process, improving projects and products to be tailored to a user base.
                                         </p>
                                     </div>
                                 </div>
